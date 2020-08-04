@@ -10,9 +10,7 @@ import java.math.BigDecimal;
 @Setter
 @AllArgsConstructor
 public class Atm {
-    /**
-     * Хост с которым банкомат обменивается данными
-     */
-    private Bank bank;
+
+    private Bank bank;//Хост с которым банкомат обменивается данными
     private BigDecimal moneyInside;
 }

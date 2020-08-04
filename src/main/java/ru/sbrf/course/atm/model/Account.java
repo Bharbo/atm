@@ -13,9 +13,6 @@ public class Account {
     private int accountNumber;//номер счета будет выступать здесь как идентификатор
     private long balance;
     private CurrencyType currencyType;
-    /**
-     * Банк в котором открыт данный счет
-     */
     private PrivilegeType privilegeTypeLevel;//уровень привелегий юзера
-    private Bank bank;
+    private Bank bank;//Банк в котором открыт данный счет
 }
