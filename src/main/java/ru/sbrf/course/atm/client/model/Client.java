@@ -1,8 +1,9 @@
-package ru.sbrf.course.atm.model;
+package ru.sbrf.course.atm.client.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import ru.sbrf.course.atm.server.Account;
 
 import java.util.Set;
 

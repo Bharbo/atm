@@ -1,4 +1,4 @@
-package ru.sbrf.course.atm.external;
+package ru.sbrf.course.atm.types;
 
 public enum PrivilegeType {
     CLASSIC,
