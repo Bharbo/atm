@@ -2,6 +2,7 @@ package ru.sbrf.course.atm.server;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ru.sbrf.course.atm.client.model.Client;
 
@@ -10,6 +11,7 @@ import java.util.Set;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Bank {
     private int id;
     private String name;

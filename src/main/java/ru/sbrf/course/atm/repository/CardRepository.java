@@ -6,6 +6,6 @@ import ru.sbrf.course.atm.server.Account;
 import ru.sbrf.course.atm.server.Card;
 
 @Repository
-public interface AccountRepository extends CrudRepository<Account, Long> {
-    Account findByCard(Card card);
+public interface CardRepository extends CrudRepository<Card, Long> {
+    Card findByNumber(String cardNumber);
 }

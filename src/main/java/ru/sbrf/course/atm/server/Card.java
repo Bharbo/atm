@@ -2,6 +2,7 @@ package ru.sbrf.course.atm.server;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ru.sbrf.course.atm.types.CurrencyType;
 import ru.sbrf.course.atm.types.PaymentSystem;
@@ -13,8 +14,9 @@ import java.util.Map;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Card {
-    private int id;
+    private long id;
     private String number;
     private Date validThrough;
     private String CVC;
