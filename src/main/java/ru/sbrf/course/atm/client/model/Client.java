@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import ru.sbrf.course.atm.server.Account;
+import ru.sbrf.course.atm.types.Role;
 
 import java.util.Set;
 
@@ -14,5 +15,6 @@ public class Client {
     private int id;
     private String firstname;
     private String lastname;
+    private String location;
     private Set<Account> accounts;
 }

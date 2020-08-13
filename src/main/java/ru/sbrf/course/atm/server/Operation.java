@@ -1,5 +1,11 @@
 package ru.sbrf.course.atm.server;
 
-public interface Operation {
+import ru.sbrf.course.atm.types.OpType;
 
+import java.util.Date;
+
+public class Operation {
+    Account account;
+    OpType opType;
+    Date date;
 }
