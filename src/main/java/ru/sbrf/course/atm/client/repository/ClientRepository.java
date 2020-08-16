@@ -1,10 +1,10 @@
-package ru.sbrf.course.atm.repository;
+package ru.sbrf.course.atm.client.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import ru.sbrf.course.atm.client.model.Client;
 
 @Repository
-public interface OperationRepository extends CrudRepository<Client, Long> {
+public interface ClientRepository extends CrudRepository<Client, Long> {
 
 }

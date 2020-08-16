@@ -1,6 +1,6 @@
 package ru.sbrf.course.atm.accesstools;
 
-public class Biometric implements AccessTools {
+public class OTP implements AccessTools{
 
     @Override
     public String getPass(Object object) {
