@@ -5,12 +5,13 @@ import ru.sbrf.course.atm.types.CurrencyType;
 import ru.sbrf.course.atm.types.Role;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Map;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "users")
 public class User {
     private int id;
     private String firstname;

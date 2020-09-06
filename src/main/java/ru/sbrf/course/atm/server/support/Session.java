@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import ru.sbrf.course.atm.server.model.Card;
-import ru.sbrf.course.atm.server.model.User;
 
 @Getter
 @Setter
