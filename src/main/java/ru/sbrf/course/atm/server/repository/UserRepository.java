@@ -6,5 +6,4 @@ import ru.sbrf.course.atm.server.model.User;
 
 @Repository
 public interface UserRepository extends CrudRepository<User, Long> {
-
 }

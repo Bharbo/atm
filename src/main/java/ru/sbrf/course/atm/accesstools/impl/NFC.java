@@ -1,6 +1,8 @@
-package ru.sbrf.course.atm.accesstools;
+package ru.sbrf.course.atm.accesstools.impl;
 
-public class JustPass implements AccessTools {
+import ru.sbrf.course.atm.accesstools.AccessTools;
+
+public class NFC implements AccessTools {
 
     @Override
     public String getPass(byte[] pass) {

@@ -1,28 +1,32 @@
 package ru.sbrf.course.atm.server.model;
 
 import lombok.*;
-import ru.sbrf.course.atm.types.CurrencyType;
-import ru.sbrf.course.atm.types.Role;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import java.util.Map;
+import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
+@RequiredArgsConstructor
 @Entity
 @Table(name = "users")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private int id;
+    @Column(name = "firstname")
+    @NonNull
     private String firstname;
+    @Column(name = "lastname")
+    @NonNull
     private String lastname;
-    private Role role;
-    private Map<CurrencyType, Account> accounts;
+    @Column(name = "role")
+    @NonNull
+    private String role;
 
-    public User(String firstname, String lastname, Role role, Map<CurrencyType, Account> accounts) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.role = role;
-        this.accounts = accounts;
-    }
+//    private Role role;
+
+//    @Column(name = "accounts")
+//    @NonNull
+//    private Map<CurrencyType, Account> accounts;
 }

@@ -9,37 +9,30 @@ import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
+@RequiredArgsConstructor
 @Entity
 @Table(name = "accounts")
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "account_id")
+    @Column(name = "id")
     private int id;
-    @Column(name = "account_number")
+    @Column(name = "number")
+    @NonNull
     private String number;
     @Column(name = "balance")
+    @NonNull
     private BigDecimal balance;
     @Column(name = "account_type")
+    @NonNull
     private AccountType accountType;
     @Column(name = "account_status")
+    @NonNull
     private AccountStatus accountStatus;
     @Column(name = "bank")
+    @NonNull
     private Bank bank;//Банк в котором открыт данный счет
     @Column(name = "card_number")
+    @NonNull
     private String cardNumber;
-//        @Column(name = "card")
-//    private Card card;
-
-
-    public Account(String number, BigDecimal balance, AccountType accountType, AccountStatus accountStatus, Bank bank, String cardNumber) {
-//    public Account(String number, BigDecimal balance, AccountType accountType, AccountStatus accountStatus, Bank bank, Card card) {
-        this.number = number;
-        this.balance = balance;
-        this.accountType = accountType;
-        this.accountStatus = accountStatus;
-        this.bank = bank;
-        this.cardNumber = cardNumber;
-//        this.card = card;
-    }
 }

@@ -1,25 +1,27 @@
 package ru.sbrf.course.atm.server.model;
 
 import lombok.*;
-import ru.sbrf.course.atm.types.OpType;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
 
 @Data
 @NoArgsConstructor
+@RequiredArgsConstructor
 @Entity
 @Table(name = "operations")
 public class Operation {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private int id;
-    private Account account;
-    private OpType opType;
+    @Column(name = "number")
+    @NonNull
+    private String number;
+    @Column(name = "opType")
+    @NonNull
+    private String opType;
+    @Column(name = "date")
+    @NonNull
     private Date date;
-
-    public Operation(Account account, OpType opType, Date date) {
-        this.account = account;
-        this.opType = opType;
-        this.date = date;
-    }
 }
