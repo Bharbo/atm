@@ -16,7 +16,7 @@ public class Card {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private long id;
+    private int id;
     @Column(name = "number")
     @NonNull
     private String number;

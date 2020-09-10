@@ -20,9 +20,9 @@ public class Bank {
     @Column(name = "location")
     @NonNull
     private String location;
-    @Column(name = "correspondent_number")
+    @Column(name = "corr_number")
     @NonNull
-    private String CorrespondentNumber;
+    private String CorrNumber;
     @Column(name = "bik")
     @NonNull
     private String BIK;

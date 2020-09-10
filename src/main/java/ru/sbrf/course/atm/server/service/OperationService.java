@@ -12,20 +12,20 @@ import java.math.BigDecimal;
 public class OperationService {
 
     OperationRepository opRep;
-    AuthService authService;
+    StartService startService;
 
     @Autowired
-    public OperationService(OperationRepository opRep, AuthService authService) {
+    public OperationService(OperationRepository opRep, StartService startService) {
         this.opRep = opRep;
-        this.authService = authService;
+        this.startService = startService;
     }
 
     public BigDecimal balanceRequest() {
-        if (authService.getCurrentAccount() == null) {
+        if (startService.getCurrentAccount() == null) {
             return null;
         }
-        Operation op = new Balance().createOperation(authService.getCurrentAccount().getNumber());;
-            opRep.save(op);
-        return authService.getCurrentAccount().getBalance();
+        Operation op = new Balance().createOperation(startService.getCurrentAccount().getNumber());
+        opRep.save(op);
+        return startService.getCurrentAccount().getBalance();
     }
 }

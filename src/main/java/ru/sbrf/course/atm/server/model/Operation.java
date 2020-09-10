@@ -18,7 +18,7 @@ public class Operation {
     @Column(name = "number")
     @NonNull
     private String number;
-    @Column(name = "opType")
+    @Column(name = "op_type")
     @NonNull
     private String opType;
     @Column(name = "date")

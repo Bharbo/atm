@@ -18,15 +18,6 @@ public class AuthController {
         this.authService = authService;
     }
 
-    @PostMapping("/card")
-//вставка карты(клиент вставляет карту, с банкомата на сервер приходит НОМЕР КАРТЫ), response - статус выполнения запроса
-    public ResponseEntity<Object> putCard(@RequestBody String cardNumber) {
-        Response response = authService.checkCard(cardNumber);
-        return response.isStatus() ?
-                new ResponseEntity<>(response.getMessage(), HttpStatus.OK) :
-                new ResponseEntity<>(response.getMessage(), HttpStatus.CREATED);//CREATED здесь - маркер, для обозначения того что получен отрицательный ответ
-    }
-
     @PostMapping("/login")//ввод пароля от карты, response - статус выполнения запроса
     public ResponseEntity<Object> logIn(@RequestBody String pass) {
         Response response = authService.checkPass(pass);

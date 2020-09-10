@@ -29,9 +29,9 @@ public class Account {
     @Column(name = "account_status")
     @NonNull
     private AccountStatus accountStatus;
-    @Column(name = "bank")
-    @NonNull
-    private Bank bank;//Банк в котором открыт данный счет
+//    @Column(name = "bank")
+//    @NonNull
+//    private Bank bank;//Банк в котором открыт данный счет
     @Column(name = "card_number")
     @NonNull
     private String cardNumber;

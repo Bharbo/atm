@@ -12,8 +12,11 @@ public class OperationController {
     OperationService operationService;
 
     @GetMapping("/balance")//account number, response = (status, сумма на счете)
-    public BigDecimal runOperation() {
-        return operationService.balanceRequest();
+    public String runOperation() {
+        BigDecimal balance = operationService.balanceRequest();
+        if (balance.equals(new BigDecimal(0)))
+            return "Ваша казна пуста, Милорд ;(";
+        else
+            return "На вашем счету " + balance + " монет";
     }
-
 }
